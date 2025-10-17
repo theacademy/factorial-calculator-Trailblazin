@@ -31,14 +31,16 @@ public class Factorial {
 			
 		- All code should be inside the placeholders below.
 		*/
-
+        // User is always asked for a value between 1 & 10
+        int min = 1;
+        int max = 10;
         //YOUR CODE STARTS HERE
         this.printStream.println("Enter a value between 1 & 10: \n");
 
         if (this.scanner.hasNextInt()) {
             //num holds the user input
             num = this.scanner.nextInt();
-            if (1 <= num && num <= 10) {
+            if (min <= num && num <= max) {
                 //valid user input :D
                 return num;
             }
@@ -52,6 +54,7 @@ public class Factorial {
             this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
         }
 
+        //Denotes any invalid user entry
         return -1;
         //YOUR CODE ENDS HERE
 
